@@ -1,0 +1,157 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>F2E-filter</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/F2E-filter.css">
+</head>
+<body>
+	
+<div class="banner">
+	<div class="logo">
+		HaveFun<inline></inline>
+	</div>
+	<div class="search">
+		<i class="fas fa-search"></i>
+		<input type="text" class="keyword" placeholder="全高雄關鍵字搜尋">
+	</div>
+</div>
+
+<div class="filter">
+	<div class="location">
+		<h1>行政區域</h1>
+
+		<div class="radius_box">
+			<select name="location" id="location">
+			</select>	
+		</div>
+	</div>
+	<div class="date">
+		<h1>造訪日期</h1>
+		<table>
+			<tr>
+				<td>
+					開始
+				</td>
+				<td>
+					<input type="date" class="start_date">
+				</td>
+			</tr>
+			<tr>
+				<td>
+				 	結束
+				</td>
+				<td>
+					<input type="date" class="end_date">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="categories">
+		<h1>其他搜尋條件</h1>
+		<!-- <div class="extend_btn">+</div> -->
+		<div>
+			<input type="checkbox" id="isAllDay">
+			<label for="isAllDay">
+				<div class = "checkmark"></div>
+				<span class = "label">全天候開放</span>
+			</label>
+		</div>
+		<div>
+			<input type="checkbox" id="isFree">
+			<label for="isFree">
+				<div class = "checkmark"></div>
+				<span class = "label">免費參觀</span>
+			</label>			
+		</div>		
+	</div>
+</div>
+
+<div class="content">
+	
+	<h1>
+		共有 <em>0</em> 則搜尋結果：
+	</h1>
+	<template id="filter_tag_template">	
+		<div class="search_keyword">
+			<i class="far fa-times-circle"></i>
+		</div>
+	</template>
+	<template id="brief_template">
+		<div class="brief">
+			<div class="img">
+				<img src="img/mola.jpg" alt="">
+			</div><div class="text">
+				<div class="title">
+					地區名稱
+				</div>
+				<div class="intro">
+					簡介
+				</div>
+				<div class="author">
+					Ethan Foster
+				</div>
+				<div class="tag freeTag">
+					免費參觀
+				</div>
+				<div class="tag openTag">
+					全天候開放
+				</div>
+				<br/><div class="place">
+					<i class="fas fa-map-marker-alt"></i>
+					高雄
+				</div>
+				<div class="tel">
+					<i class="fas fa-phone"></i>
+					電話
+				</div>
+			</div>
+		</div>
+	</template>
+	<div class="page_index">
+	</div>
+</div>
+
+
+<div class="content2">
+
+</div>
+
+<template id="detail_template">
+		<div class="info">
+			<em>探索</em> / <span>高雄地名</span>
+		</div>
+		<div class="detail">
+			<img src="img/mola.jpg" alt="">
+			<div class="description">
+				<div class="title">
+					地名標題
+				</div>			
+				<div class="author">
+					行政區
+				</div>
+				<div class="tag freeTag">
+					免費參觀
+				</div>
+				<div class="tag openTag">
+					全天候開放
+				</div>
+				<br/><div class="place">
+					<i class="fas fa-map-marker-alt"></i>
+				</div>
+				<div class="tel">
+					<i class="fas fa-phone"></i>
+				</div>
+				<div class="intro">
+							簡介
+				</div>
+			</div>
+		</div>
+</template>
+
+
+	<script src="js/F2E-filter.js"></script>
+</body>
+</html>
